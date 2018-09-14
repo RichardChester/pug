@@ -1,0 +1,29 @@
+html
+    head
+        title MyApp
+    body(class=['myClass'])
+        form(method='post' action='/movies/add')
+            table
+                tr
+                    td
+                        label Movie Names
+                    td
+                        input(type='text' name='title')
+                tr
+                    td
+                        label Year
+                    td
+                        input(type='text' name='year')
+            input(type='submit' value='submit')
+    H1(id=`MyId`) Library
+    p
+        h3 sub header
+    ul
+        each val in movies
+                li=val
+    H1(id=`MyActor`) actor
+        p
+            h3 sub header
+        ul
+            each val in actor
+                li=val
