@@ -51,17 +51,17 @@ app.get('/',function (req,res) {
 
 });
 app.post('/movies/add', function(req,res) {
-    console.log('hello1')
+    console.log('hello1');
     var title = req.body.title;
     var year = req.body.year;
 
     session
         .run('CREATE(n:Movie {title:{titleParam},year:{yearParam}}) RETURN n.title',{titleParam:title,yearParam:year })
         .then(function(result){
-            console.log(result)
+            console.log(result);
 
             res.redirect('/');
-            console.log('hello')
+            console.log('hello');
             session.close();
         })
 
